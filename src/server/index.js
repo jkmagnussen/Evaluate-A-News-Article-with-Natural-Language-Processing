@@ -12,11 +12,13 @@ app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-// designates what port the app will listen to for incoming requests
-app.listen(4000, function () {
-    console.log('Example app listening on port 4000!')
+app.get('/test', function (req, res) {
+    res.json(mockAPIResponse)
 })
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
+// designates what port the app will listen to for incoming requests
+app.listen(8081, function () {
+    console.log('Example app listening on port 8081!')
 })
+
+
