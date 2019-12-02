@@ -1,5 +1,7 @@
 import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { buttonHandler } from './js/buttonHandler'
+
 
 import './styles/resets.scss'
 import './styles/base.scss'
@@ -10,8 +12,8 @@ import './styles/header.scss'
 export {
     checkForName,
     handleSubmit,
+    buttonHandler 
 }
-console.log(checkForName);
 
 alert("I EXIST")
 console.log("CHANGE!!");
