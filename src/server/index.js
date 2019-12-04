@@ -1,6 +1,11 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
+
+const bodyParser = require('body-parser')
 
 const app = express()
 const cors = require('cors')
@@ -24,4 +29,17 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
+var AYLIENTextAPI = require('aylien_textapi');
+// setting up AYLIENTextAPI credentials: 
+var textapi = new aylien({
+  application_id: process.env.API_ID,
+  application_key: process.env.API_KEY
+  });
 
+textapi.sentiment({
+    'text': 'John is a very good football player!'
+  }, function(error, response) {
+    if (error === null) {
+      console.log(response);
+    }
+  });
