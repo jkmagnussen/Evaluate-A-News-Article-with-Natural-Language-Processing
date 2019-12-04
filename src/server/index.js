@@ -29,7 +29,7 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
-var AYLIENTextAPI = require('aylien_textapi');
+var aylien = require('aylien_textapi');
 // setting up AYLIENTextAPI credentials: 
 var textapi = new aylien({
   application_id: process.env.API_ID,
