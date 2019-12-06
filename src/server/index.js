@@ -5,29 +5,33 @@ var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 
-const bodyParser = require('body-parser')
-
 const app = express()
 const cors = require('cors')
+ const bodyparser = require('body-parser');
+
+ const postRequest = ('./handle')
 
 app.use(cors())
 
 app.use(express.static('dist'))
 
-console.log(__dirname)
+app.use(bodyParser.urlencoded({
+  extended: true;
+
+console.log(__dirname);
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-app.get('/test', function (req, res) {
-    res.json(mockAPIResponse)
+app.get('/save', function (req, res) {
+    res.json(mockAPIResponse);
 })
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
-})
+});
 
 var aylien = require('aylien_textapi');
 // setting up AYLIENTextAPI credentials: 
@@ -36,10 +40,16 @@ var textapi = new aylien({
   application_key: process.env.API_KEY
   });
 
-textapi.sentiment({
-    'text': 'John is a very good football player!'
+  // Post Route
+app.post("/save", (req, res) => {
+  textapi.sentiment({
+ 'url': req.body.value 
   }, function(error, response) {
+    res.send(response)
     if (error === null) {
       console.log(response);
     }
-  });
+  })
+});
+
+module.exports = app;

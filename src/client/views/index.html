@@ -9,34 +9,62 @@
 
         <header>
             <div class="">
-                Logo
+                <img src = '/src/client/views/aylien.png' alt="Smiley face" height="120px;" width="300px;" >
             </div>
             <div class="">
-                navigation
+                <img src = '/src/client/views/node.png' alt="Smiley face" height="120px;" width="250px;" >
             </div>
         </header>
-
+        <br><br><br>
+        <h1>News Article Evaluator <br>Through Natural Language Processing
+        </h1>
+<br>
         <main>
             <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="url" name="test-url" value=""  placeholder="https://www.news-source/a-news-article...">
+                    <input id ="sub" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             <section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-            <section>
-                <strong>Button results:</strong>
-                <div id="buttonHandlerResults">
-                    <button onclick="return Client.buttonHandler(event)">Button</button>
-                </div>
-            </section>
+            <section class="url-results">
+                    <ul>
+                        <li>
+                            <h3>Text Polarity:</h3>
+                            <p id="polarity"></p>
+                            <h4>Confidence: </h4>
+                            <p id="polarity_confidence"></p>
+                        </li>
+    
+                        <li>
+                            <h3>Text Subjectivity:</h3>
+                            <p id="subjectivity"></p>
+                            <h4>Confidence: </h4>
+                            <p id="subjectivity_confidence"></p>
+                        </li>
+    
+                        <h3>Text Excerpt:</h3>
+                        <p id="excerpt"></p>
+                    </ul>
+                </section>
         </main>
-        <footer>
-            <p>This is a footer</p>
+
+        <footer role="contentinfo">
+            Copyright © 2019, JKMagnussen. All Rights Reserved | 
+        <a href='http://www.linkedin.com/in/joseph-magnussen-478827189'><span style='color: rgb(255, 253, 253);'>LinkedIn</span></a> 
+        | <a href='https://github.com/jkmagnussen'><span style='color: rgb(255, 253, 253);'>Github </span></a>
+        | <a href='https://jkmagnussen.com'><span style='color: rgb(255, 255, 255);'>Homepage </span></a>
         </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+
     </body>
 </html>
