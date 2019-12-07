@@ -37,11 +37,11 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
     }),
-    new WorkboxPlugin({
-        globDirectory: './dist/',
-        globPatterns: ['**/*.{html,js,css}'],
-        swDest: './dist/service-worker.js'
-      }),
+    // new WorkboxPlugin({
+    //     globDirectory: './dist/',
+    //     globPatterns: ['**/*.{html,js,css}'],
+    //     swDest: './dist/service-worker.js'
+    //   }),
     ]
 
 }
