@@ -18,8 +18,6 @@ function handleSubmit(event) {
     } else {
       document.getElementById('error-message').innerHTML = "Sorry, this is not a valid URL."
     }
-
-
 }
 
 const _postData = async (path, input_url) => {

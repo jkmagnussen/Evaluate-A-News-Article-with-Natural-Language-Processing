@@ -44,10 +44,42 @@ footer {
 }
 
 #polarity {
-    color: rgb(29, 182, 67);
+    color: rgb(94, 194, 36);
     padding: 10px;
     font-size: 24px;
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+    text-align: left;
+}
 
+#polarity_confidence{
+    color: rgb(94, 194, 36);
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+#subjectivity{
+    color: rgb(94, 194, 36);
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+#subjectivity_confidence{
+    color: rgb(94, 194, 36);
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+}
+
+#excerpt{
+    color: rgb(94, 194, 36);
+    padding: 10px;
+    font-size: 24px;
+    line-height: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
 }
