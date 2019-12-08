@@ -1,12 +1,10 @@
-# Webpack Express Example App
+# Webpack Express App Project
 
-The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
+This is a project that excercised my ability to navigate through the module bundler, 'Webpack'. The result of which is a NLP API and express/ node.js driven application. 
+ 
 
-If you want to follow along, start from branch 0-initial-setup. Each branch in this project is a step along the path to creating a fully functional webpack setup. In each branch, there will be a documentation file that lists out the steps taken in that branch (each step is also roughly a git commit if you look at the history) which you can use as a checklist when setting up your own projects. 
+## What this project encompassses: 
 
-## What we will cover
-
-We will cover:
 
 - Webpack entry point
 - Webpack output and dist folder
@@ -14,16 +12,20 @@ We will cover:
 - Webpack Plugins
 - Webpack Mode
 - Tools for convenient Webpack development
+- Sass, Jest (JS Unit Testing), Aylien API, html, css, packagr.json, prod/dev webpack configurations  
 
-## Get Up and Running
+## How to run 
 
-Fork this repo, then clone the branch of your choice from your forked repo down to your computer:
+To run this app, the server must be actioned through, 'npm run start', not through the index.js server directory as this will omit the api key. Then an instance of  webpack must be run in the terminal, upon doing so the application should open within a browzer window. uSE, 'Webpack build-dev' to access the development build or, 'Webpack build-prod' t oaccess the finished production application. 
 
-```
-git clone -- git@github.com:[your-user-name]/webpack-express.git --
-```
+npm run start (to instance the server)
 
-`cd` into your new folder and run:
+npm run build-dev (to run the development mode of the app)
+
+npm run build-prod (to run the production mode of the app)
+
+Upon downloading the app file you will also need to cd into the folder and: 
+
 - ```npm install```
 - ```npm start``` to start the app
 - this app runs on localhost:8080, but you can of course edit that in server.js
