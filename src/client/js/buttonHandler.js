@@ -5,7 +5,7 @@ function buttonHandler (event) {
     return response.json()
     }).then (function (response){
         console.log(response)
-        document.getElementById('polarity').innerHTML = JSON.stringify(response);
+        document.getElementById('buttonHandlerResults').innerHTML = JSON.stringify(response);
     })
 };
 

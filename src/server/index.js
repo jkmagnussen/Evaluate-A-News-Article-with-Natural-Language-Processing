@@ -1,6 +1,5 @@
 const dotenv = require('dotenv');
 dotenv.config();
-
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
@@ -16,11 +15,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 })
 );
-
 app.use(bodyParser.json())
-
 console.log(__dirname);
-
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
